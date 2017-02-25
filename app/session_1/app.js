@@ -1,58 +1,27 @@
-/*let name = "Suraj";
-let age = 20;
-//Key Value pair es5
-var obj = {name: "suraj", age: 10};
+var bubbleSort = () =>{
+    let myarray = [23,2,4,21,7,4,6,0,9,1,7,34,21,67,32,67,8,3,2,4,5];
+    let len = myarray.length;
+    let swapped = false;
+    do{
+        
+        swapped = false;
+        for(var i = 0; i<len -1; i++){
 
-let object = {name,age};
+            if(myarray[i] > myarray[i + 1]){
 
-console.log(object)*/
+                //Found Small Value
+                var temp = myarray[i + 1];
+                //Replae small value with previous value
+                myarray[i + 1] = myarray[i];
+                //Do the swaping
+                myarray[i] = temp;
+                //Continue looking
+                swapped = true;
+                
+            }
+        }
 
-//Conditions
-
-var a = 11;
-/*
-if(a == 10){
-    console.log("It's 10");
+    }while(swapped);
+    console.log ("Big Value ", myarray);
 }
-else if(a == 20){
-    console.log("It's 20");
-}
-else{
-    console.log("It's not 10");
-}*/
-//Node condition
-/*if(a != 10){
-    console.log("a is not 10")
-}*/
-/*
-var result = (a == 10) ? "It's 10" : "It's not 10";
-console.log(result)*/
-
-
-// Operators and Conditions
-
-var myarray = [10,3,2,6,4,8,1,7,3,7,8,9];
-
-//Loops for, while, dowhile forEach is
-
-//for(assignment/init;comprasion;increment/decrement)
-//global and local
-
-var k = 0;
-
-/*if(myarray[1] == 10){
-    console.log(11)
-}
-
-for(let i = 0;i<10;i++){
-    console.log("Value ",i);
-    console.log("Executed");
-}
-
-console.log("End ", i);*/
-
-
-
-
-
-
+bubbleSort();
