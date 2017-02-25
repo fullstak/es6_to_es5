@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="build/libs/polyfill.js"></script>
+        <script src="build/libs/system.js"></script>
+        <script>
+        // set our baseURL reference path
+        System.config({
+            packages: {        
+                build: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+            },
+            meta: {
+                'build/*': {format: 'cjs'}
+            }
+        });
+                  
+         System.import('build/app.js')
+                     .then(null, console.error.bind(console));
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
